@@ -1,0 +1,36 @@
+// {
+//   "extends": "next/core-web-vitals",
+  
+//   "rules": {
+//     // "no-undef": "error",
+//     // "no-unused-vars": "warn",
+//     "no-duplicate-imports": "warn",
+//     // "import/no-unresolved": "error",
+//     "react/react-in-jsx-scope": "off",
+//     "react/no-unknown-property": "error"
+//   }
+// }
+
+
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json" // Ensure this path points to your TypeScript configuration
+  },
+  "rules": {
+    "no-duplicate-imports": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unknown-property": "error",
+    "@typescript-eslint/ban-ts-comment": "warn"
+  }
+}
